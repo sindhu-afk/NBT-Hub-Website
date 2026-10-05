@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="shCyber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C6FF"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="shGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5B056"/>
+      <stop offset="100%" stop-color="#D48D30"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="none" rx="16"/>
+  <circle cx="200" cy="115" r="54" fill="rgba(0,198,255,0.08)" stroke="url(#shCyber)" stroke-width="2"/>
+  
+  <!-- Hospital Cross & Shield Emblem -->
+  <path d="M200 78 L232 92 C232 118 220 138 200 152 C180 138 168 118 168 92 Z" fill="rgba(13,31,51,0.9)" stroke="url(#shGold)" stroke-width="2.5"/>
+  <!-- Medical Plus -->
+  <path d="M195 98 L205 98 L205 110 L217 110 L217 120 L205 120 L205 132 L195 132 L195 120 L183 120 L183 110 L195 110 Z" fill="url(#shCyber)"/>
+
+  <text x="200" y="196" text-anchor="middle" font-family="'Space Grotesque', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" letter-spacing="1">SAINIK HOSPITAL</text>
+  <text x="200" y="222" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#00C6FF" letter-spacing="2.5">MULTISPECIALITY • MYSURU</text>
+  <text x="200" y="248" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">ADVANCED CLINICAL &amp; EMERGENCY CARE</text>
+</svg>

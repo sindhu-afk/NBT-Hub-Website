@@ -1,0 +1,297 @@
+/* ==========================================================================
+   NBT HUB / NAVABHARATH TECHNOLOGIES - CORE DESIGN SYSTEM (LOGO THEMED)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesque:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Logo Derived Color Palette */
+  --bg-deep: #050B14;
+  --bg-dark: #07111E;
+  --bg-card: #0D1F33;
+  --bg-card-hover: #122842;
+  --bg-glass: rgba(13, 31, 51, 0.7);
+  --bg-glass-strong: rgba(15, 36, 58, 0.85);
+
+  /* Metallic Silver & Steel Gradients */
+  --silver-light: #F1F5F9;
+  --silver-main: #CBD5E1;
+  --silver-steel: #94A3B8;
+  --silver-dark: #64748B;
+  --silver-border: rgba(203, 213, 225, 0.15);
+  --silver-border-strong: rgba(203, 213, 225, 0.3);
+
+  /* Shield Emblem Amber / Bronze Gold */
+  --gold-primary: #D48D30;
+  --gold-hover: #E59C3A;
+  --gold-light: #F5B056;
+  --gold-glow: rgba(212, 141, 48, 0.25);
+  --gold-glow-strong: rgba(212, 141, 48, 0.45);
+  --gold-border: rgba(212, 141, 48, 0.35);
+
+  /* Cyber Blue Highlights */
+  --cyber-blue: #00C6FF;
+  --cyber-teal: #0EA5E9;
+  --cyber-glow: rgba(0, 198, 255, 0.2);
+
+  /* Typography */
+  --font-display: 'Bricolage Grotesque', 'Space Grotesque', sans-serif;
+  --font-heading: 'Space Grotesque', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Layout & Spacing */
+  --container-max: 1280px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Brand Authority Scroll Indicator Travel */
+  --rule-travel: calc(78vh - 10px);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--silver-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+::selection {
+  background: var(--gold-primary);
+  color: var(--bg-deep);
+}
+
+/* Background Texture Overlays (Noise & Dot Grid inspired by reference site) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    radial-gradient(rgba(0, 198, 255, 0.08) 1px, transparent 1px),
+    radial-gradient(rgba(212, 141, 48, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% -20%, rgba(13, 31, 51, 0.8), transparent 70%),
+              radial-gradient(circle at 90% 80%, rgba(212, 141, 48, 0.05), transparent 50%),
+              radial-gradient(circle at 10% 40%, rgba(0, 198, 255, 0.04), transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(20px, 5vw, 48px);
+  padding-right: clamp(20px, 5vw, 48px);
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--silver-light);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.text-gold {
+  color: var(--gold-primary);
+}
+
+.text-silver {
+  color: var(--silver-light);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFF 0%, var(--gold-primary) 60%, var(--gold-hover) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-silver {
+  background: linear-gradient(135deg, #FFFFFF 0%, var(--silver-main) 60%, var(--silver-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyber {
+  background: linear-gradient(135deg, var(--silver-light) 0%, var(--cyber-blue) 50%, var(--gold-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Badges & Pills */
+.badge-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(212, 141, 48, 0.1);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-full);
+  color: var(--gold-primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px var(--gold-glow);
+}
+
+.badge-silver {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(203, 213, 225, 0.08);
+  border: 1px solid var(--silver-border);
+  border-radius: var(--radius-full);
+  color: var(--silver-light);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Section Header Shared Styles */
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 60px auto;
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: var(--silver-steel);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Glassmorphism Card Base */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--silver-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-panel:hover {
+  border-color: var(--silver-border-strong);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-smooth);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary-gold {
+  background: linear-gradient(135deg, #E59C3A 0%, var(--gold-primary) 100%);
+  color: var(--bg-deep);
+  box-shadow: 0 4px 20px var(--gold-glow-strong);
+}
+
+.btn-primary-gold::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #F5B056 0%, #E59C3A 100%);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  z-index: -1;
+}
+
+.btn-primary-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(212, 141, 48, 0.6);
+}
+
+.btn-primary-gold:hover::before {
+  opacity: 1;
+}
+
+.btn-outline-silver {
+  background: rgba(13, 31, 51, 0.6);
+  border: 1px solid var(--silver-border-strong);
+  color: var(--silver-light);
+  backdrop-filter: blur(10px);
+}
+
+.btn-outline-silver:hover {
+  background: rgba(203, 213, 225, 0.12);
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+  transform: translateY(-2px);
+}

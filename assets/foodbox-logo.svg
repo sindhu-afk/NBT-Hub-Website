@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5E3A"/>
+      <stop offset="100%" stop-color="#FF2A6D"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="none" rx="16"/>
+  <circle cx="200" cy="115" r="54" fill="rgba(255,94,58,0.12)" stroke="url(#fbGrad)" stroke-width="2"/>
+  
+  <!-- FoodBox Cloche / Box & Fork Icon -->
+  <path d="M165 125 C165 100 180 88 200 88 C220 88 235 100 235 125 Z" fill="none" stroke="url(#fbGrad)" stroke-width="3.5"/>
+  <line x1="155" y1="130" x2="245" y2="130" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="200" cy="84" r="5" fill="#FF5E3A"/>
+  
+  <text x="200" y="196" text-anchor="middle" font-family="'Space Grotesque', sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="1.5">FOODBOX</text>
+  <text x="200" y="222" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#FF5E3A" letter-spacing="3.5">MYSURU</text>
+  <text x="200" y="248" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">GOURMET DINING &amp; SOCIAL MEDIA</text>
+</svg>

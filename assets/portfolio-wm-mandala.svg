@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" fill="none">
+  <defs>
+    <radialGradient id="mandalaGold" cx="100%" cy="100%" r="90%">
+      <stop offset="0%" stop-color="#E5A84B" stop-opacity="0.32"/>
+      <stop offset="60%" stop-color="#D4AF37" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#CA8A04" stop-opacity="0.04"/>
+    </radialGradient>
+  </defs>
+  <!-- Concentric Rings from Corner (200, 160) -->
+  <g stroke="#E5A84B" stroke-opacity="0.25" fill="none">
+    <circle cx="200" cy="160" r="140" stroke-width="0.8"/>
+    <circle cx="200" cy="160" r="120" stroke-width="1.2" stroke-dasharray="4 4"/>
+    <circle cx="200" cy="160" r="100" stroke-width="0.9"/>
+    <circle cx="200" cy="160" r="80" stroke-width="1.4" stroke-dasharray="6 3"/>
+    <circle cx="200" cy="160" r="60" stroke-width="0.8"/>
+    <circle cx="200" cy="160" r="40" stroke-width="1.2"/>
+    <circle cx="200" cy="160" r="20" stroke-width="0.8"/>
+  </g>
+  <!-- Mandala Petals radiating from (200, 160) -->
+  <g stroke="#E5A84B" stroke-width="1" stroke-opacity="0.2" fill="url(#mandalaGold)">
+    <path d="M200,160 Q130,130 90,80 Q150,110 200,160 Z"/>
+    <path d="M200,160 Q110,100 80,40 Q130,90 200,160 Z"/>
+    <path d="M200,160 Q150,80 120,20 Q160,80 200,160 Z"/>
+    <path d="M200,160 Q160,140 120,120 Q160,150 200,160 Z"/>
+    <path d="M200,160 Q140,160 100,140 Q150,165 200,160 Z"/>
+  </g>
+</svg>

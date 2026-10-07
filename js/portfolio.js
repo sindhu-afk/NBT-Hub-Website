@@ -4,12 +4,14 @@
    ========================================================================== */
 
 const PORTFOLIO_DATA = [
-  // 1. Dr. Madhuram Chowdry Ortho
+  // 1. Dr. Madhuram Chowdry
   {
     id: 'dr-madhuram',
-    title: 'Dr. Madhuram Chowdry Ortho',
+    title: 'Dr. Madhuram Chowdry',
     category: 'healthcare',
     categoryLabel: 'Healthcare',
+    tagline: 'ORTHOPEDIC CARE',
+    watermarkImg: 'assets/portfolio-wm-waves.svg',
     coverImg: 'assets/dr-madhuram-logo.png',
     logoImg: 'assets/dr-madhuram-logo.png',
     isLogo: true,
@@ -31,6 +33,8 @@ const PORTFOLIO_DATA = [
     title: 'Navabharath Technologies',
     category: 'corporate',
     categoryLabel: 'Corporate Hub',
+    tagline: 'TECH & IT SOLUTIONS',
+    watermarkImg: 'assets/portfolio-wm-circuit.svg',
     coverImg: 'assets/logo.png',
     logoImg: 'assets/logo.png',
     isLogo: true,
@@ -52,6 +56,8 @@ const PORTFOLIO_DATA = [
     title: 'TokensBoy',
     category: 'saas',
     categoryLabel: 'SaaS & Apps',
+    tagline: 'SAAS & APPS',
+    watermarkImg: 'assets/portfolio-wm-leaves.svg',
     coverImg: 'assets/tokensboy-logo.png',
     logoImg: 'assets/tokensboy-logo.png',
     isLogo: true,
@@ -75,6 +81,8 @@ const PORTFOLIO_DATA = [
     title: 'Nidhi Fresh Basket',
     category: 'ecommerce',
     categoryLabel: 'E-Commerce',
+    tagline: 'FARM PRODUCE GROCERY',
+    watermarkImg: 'assets/portfolio-wm-botanical.svg',
     coverImg: 'assets/nidhifresh-logo.png',
     logoImg: 'assets/nidhifresh-logo.png',
     isLogo: true,
@@ -91,40 +99,21 @@ const PORTFOLIO_DATA = [
     liveLink: 'https://nidhifreshbasket.com/'
   },
 
-  // 5. Car Mart Mysore
-  {
-    id: 'carmart-mysore',
-    title: 'Car Mart Mysore',
-    category: 'marketplace',
-    categoryLabel: 'Marketplace',
-    coverImg: 'assets/carmart-logo.png',
-    logoImg: 'assets/carmart-logo.png',
-    isLogo: true,
-    tags: ['Automotive Marketplace', 'Vehicle Inventory', 'Lead Gen'],
-    shortDesc: 'Premier vehicle listing and pre-owned car marketplace platform in Mysore with verified seller inventory and direct buyer inquiries.',
-    fullDesc: 'Built a responsive, high-converting automotive marketplace for Car Mart Mysore, featuring vehicle model filtering, seller verification, test-drive booking requests, and real-time WhatsApp inquiry routing.',
-    results: [
-      '500+ Active vehicle listings managed seamlessly',
-      'Instant WhatsApp test-drive inquiry routing',
-      'Over 40% increase in qualified buyer leads'
-    ],
-    techStack: ['Next.js', 'PostgreSQL', 'TailwindCSS', 'WhatsApp Business API'],
-    liveLink: 'https://carmartmysore.in/'
-  },
-
-  // 6. Mysore Handicrafts
+  // 5. Traditional Crafts
   {
     id: 'mysore-handicrafts',
-    title: 'Mysore Handicrafts',
+    title: 'Traditional Crafts',
     category: 'ecommerce',
     categoryLabel: 'E-Commerce',
+    tagline: 'CULTURE & HERITAGE',
+    watermarkImg: 'assets/portfolio-wm-mandala.svg',
     coverImg: 'assets/mysore-handicrafts-logo.png',
     logoImg: 'assets/mysore-handicrafts-logo.png',
     isLogo: true,
     withPlate: true,
     tags: ['Artisan Crafts', 'Heritage Products', 'Global E-Commerce'],
     shortDesc: 'Global e-commerce portal showcasing authentic Mysore handcrafted rosewood, sandalwood, and silk heritage artifacts to international markets.',
-    fullDesc: 'Architected an elegant, heritage-inspired global e-commerce storefront for Mysore Handicrafts, connecting local artisans directly with international buyers with multi-currency payment checkout and worldwide shipping calculation.',
+    fullDesc: 'Architected an elegant, heritage-inspired global e-commerce storefront for Traditional Crafts / Mysore Handicrafts, connecting local artisans directly with international buyers with multi-currency payment checkout and worldwide shipping calculation.',
     results: [
       'Expanded artisan sales reach to 18+ international countries',
       'High-res artisan zoom gallery & authenticity verification',
@@ -134,12 +123,14 @@ const PORTFOLIO_DATA = [
     liveLink: 'https://mysorehandicrafts.com/'
   },
 
-  // 7. Sainik Multispeciality Hospital Mysuru
+  // 6. Sainik Multispeciality
   {
     id: 'sainik-hospital',
-    title: 'Sainik Multispeciality Hospital',
+    title: 'Sainik Multispeciality',
     category: 'healthcare',
     categoryLabel: 'Healthcare',
+    tagline: 'HOSPITAL & EMERGENCY',
+    watermarkImg: 'assets/portfolio-wm-hospital.svg',
     coverImg: 'assets/sainik-hospital-logo.png',
     logoImg: 'assets/sainik-hospital-logo.png',
     isLogo: true,
@@ -155,12 +146,14 @@ const PORTFOLIO_DATA = [
     liveLink: 'https://sainikmultispecialityhospitalmysuru.com/'
   },
 
-  // 8. JKD MART
+  // 7. JKD Mart
   {
     id: 'jkdmart',
-    title: 'JKD MART',
+    title: 'JKD Mart',
     category: 'ecommerce',
     categoryLabel: 'E-Commerce',
+    tagline: 'RETAIL & CONVENIENCE',
+    watermarkImg: 'assets/portfolio-wm-cart.svg',
     coverImg: 'assets/jkdmart-logo.png',
     logoImg: 'assets/jkdmart-logo.png',
     isLogo: true,
@@ -177,12 +170,14 @@ const PORTFOLIO_DATA = [
     liveLink: 'https://jkdmart.com/'
   },
 
-  // 9. VYAPAROne Trade Platform
+  // 8. Vyapar One
   {
     id: 'vyaparone',
-    title: 'VYAPAROne',
+    title: 'Vyapar One',
     category: 'saas',
     categoryLabel: 'SaaS & Apps',
+    tagline: 'BUSINESS SOLUTIONS',
+    watermarkImg: 'assets/portfolio-wm-chart.svg',
     coverImg: 'assets/vyaparone-logo.png',
     logoImg: 'assets/vyaparone-logo.png',
     isLogo: true,
@@ -215,8 +210,6 @@ function renderPortfolioGrid(filter = 'all', searchQuery = '') {
       matchesFilter = item.category === 'ecommerce';
     } else if (filter === 'saas') {
       matchesFilter = item.category === 'saas' || item.category === 'corporate';
-    } else if (filter === 'marketplace') {
-      matchesFilter = item.category === 'marketplace';
     } else {
       matchesFilter = item.category === filter;
     }
@@ -225,6 +218,7 @@ function renderPortfolioGrid(filter = 'all', searchQuery = '') {
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.shortDesc.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.categoryLabel.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (item.tagline && item.tagline.toLowerCase().includes(searchQuery.toLowerCase())) ||
       item.tags.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()));
     
     return matchesFilter && matchesSearch;
@@ -232,7 +226,7 @@ function renderPortfolioGrid(filter = 'all', searchQuery = '') {
 
   if (filtered.length === 0) {
     container.innerHTML = `
-      <div style="grid-column: 1/-1; text-align: center; padding: 70px 20px; background: #0a2724; color: var(--silver-steel);">
+      <div style="grid-column: 1/-1; text-align: center; padding: 70px 20px; background: rgba(10, 39, 36, 0.6); border-radius: 20px; border: 1px solid rgba(255,255,255,0.08); color: var(--silver-steel);">
         <p style="font-size: 1.2rem; font-family: var(--font-heading); color: #FFFFFF;">No projects found matching your query.</p>
         <p style="font-size: 0.9rem; margin-top: 8px;">Try clearing your search or selecting another category.</p>
       </div>
@@ -240,28 +234,57 @@ function renderPortfolioGrid(filter = 'all', searchQuery = '') {
     return;
   }
 
-  if (filtered.length <= 2 && window.innerWidth > 576) {
-    container.style.gridTemplateColumns = `repeat(${filtered.length}, 1fr)`;
+  if (window.innerWidth > 768) {
+    if (filtered.length === 8 || filtered.length === 4) {
+      container.style.gridTemplateColumns = 'repeat(4, 1fr)';
+    } else if (filtered.length === 6 || filtered.length === 3) {
+      container.style.gridTemplateColumns = 'repeat(3, 1fr)';
+    } else if (filtered.length <= 2) {
+      container.style.gridTemplateColumns = `repeat(${filtered.length}, 1fr)`;
+    } else {
+      container.style.gridTemplateColumns = 'repeat(4, 1fr)';
+    }
   } else {
     container.style.gridTemplateColumns = '';
   }
 
   container.innerHTML = filtered.map(item => `
     <div class="portfolio-tile" onclick="openCaseStudyModal('${item.id}')" title="Click to view ${item.title} Case Study">
-      <div class="portfolio-tile-brand ${item.withPlate ? 'with-plate' : ''}">
-        <img src="${item.logoImg || item.coverImg}" alt="${item.title} Logo" loading="lazy" />
+      <!-- Subtle Thematic Background Watermark Artwork -->
+      <div class="portfolio-tile-watermark">
+        <img src="${item.watermarkImg}" alt="" aria-hidden="true" loading="lazy" />
       </div>
-      <div class="portfolio-tile-overlay">
+
+      <!-- Top: Centered Brand Logo -->
+      <div class="portfolio-tile-top">
+        <div class="portfolio-tile-brand ${item.withPlate ? 'with-plate' : ''}">
+          <img src="${item.logoImg || item.coverImg}" alt="${item.title} Logo" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Bottom: Typography and Interactive Action Button Row -->
+      <div class="portfolio-tile-bottom">
         <h4 class="portfolio-tile-title">${item.title}</h4>
-        <span class="portfolio-tile-category">${item.categoryLabel}</span>
-        <div class="portfolio-tile-actions">
-          <button class="portfolio-action-btn btn-study" onclick="openCaseStudyModal('${item.id}'); event.stopPropagation();">
-            Case Study <i data-lucide="eye" style="width:12px;height:12px;"></i>
+        <span class="portfolio-tile-tagline">${item.tagline || item.categoryLabel}</span>
+
+        <div class="portfolio-tile-action-wrap">
+          <!-- Default State: Golden Circle Arrow Button -->
+          <button class="portfolio-tile-circle-btn" aria-label="View Project" onclick="openCaseStudyModal('${item.id}'); event.stopPropagation();">
+            <i data-lucide="arrow-right"></i>
           </button>
-          ${item.liveLink && item.liveLink !== '#' ? `
-          <a href="${item.liveLink}" target="_blank" rel="noopener noreferrer" class="portfolio-action-btn btn-live" onclick="event.stopPropagation();">
-            Live Site <i data-lucide="arrow-up-right" style="width:12px;height:12px;"></i>
-          </a>` : ''}
+
+          <!-- Hover / Active State: Dual Pill Buttons (TokensBoy state in mockup) -->
+          <div class="portfolio-tile-hover-pills">
+            <button class="portfolio-pill-btn pill-study" onclick="openCaseStudyModal('${item.id}'); event.stopPropagation();">
+              <span>Case Study</span>
+              <i data-lucide="eye"></i>
+            </button>
+            ${item.liveLink && item.liveLink !== '#' ? `
+            <a href="${item.liveLink}" target="_blank" rel="noopener noreferrer" class="portfolio-pill-btn pill-live" onclick="event.stopPropagation();">
+              <span>Live Site</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>` : ''}
+          </div>
         </div>
       </div>
     </div>
@@ -368,6 +391,13 @@ document.addEventListener('DOMContentLoaded', () => {
       renderPortfolioGrid(activeFilter, e.target.value);
     });
   }
+
+  // Responsive Resize Re-render
+  window.addEventListener('resize', () => {
+    const activeFilter = document.querySelector('.filter-btn.active')?.getAttribute('data-filter') || 'all';
+    const searchVal = document.getElementById('portfolio-search')?.value || '';
+    renderPortfolioGrid(activeFilter, searchVal);
+  });
 
   // Modal Backdrop Click
   const modal = document.getElementById('case-study-modal');

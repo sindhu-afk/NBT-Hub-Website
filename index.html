@@ -15,10 +15,70 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/main.css?v=5" />
-  <link rel="stylesheet" href="css/components.css?v=7" />
+  <link rel="stylesheet" href="css/components.css?v=9" />
   <link rel="stylesheet" href="css/animations.css?v=5" />
+  <link rel="stylesheet" href="css/intro-splash.css?v=1" />
 </head>
-<body>
+<body class="intro-locked">
+
+  <!-- THE BRAND AUTHORITY INSPIRED INTRO SPLASH / PRELOADER -->
+  <aside id="intro-splash" class="intro-splash" aria-label="Navabharath Technologies Intro" role="dialog" aria-modal="true">
+    <!-- Ambient Backdrop Layers -->
+    <div class="intro-splash-backdrop">
+      <div class="intro-splash-radial"></div>
+      <div class="intro-splash-grid"></div>
+    </div>
+
+    <!-- Center Brand Showcase -->
+    <div class="intro-splash-stage">
+      <!-- Shield Logo Emblem -->
+      <div class="intro-logo-wrapper">
+        <div class="intro-logo-glow" aria-hidden="true"></div>
+        <img 
+          src="assets/nbt-shield-clean.png" 
+          alt="Navabharath Technologies Shield Emblem" 
+          class="intro-logo-img" 
+          width="135" 
+          height="176" 
+        />
+      </div>
+
+      <!-- Brand Typography Header -->
+      <div class="intro-brand-header">
+        <h1 class="intro-brand-title">NAVABHARATH TECHNOLOGIES</h1>
+      </div>
+
+      <!-- Signature Gold Accent Line -->
+      <div class="intro-divider-wrap">
+        <div class="intro-divider-line"></div>
+      </div>
+
+      <!-- Motto / Tagline -->
+      <div class="intro-tagline-wrap">
+        <p class="intro-tagline">INNOVATE &nbsp;•&nbsp; BUILD &nbsp;•&nbsp; ELEVATE</p>
+      </div>
+
+      <!-- Experience Loading Status -->
+      <div class="intro-status-wrap">
+        <div class="intro-status-bar">
+          <div class="intro-status-fill" id="intro-status-fill"></div>
+        </div>
+        <div class="intro-status-meta">
+          <span class="intro-status-code">EXPERIENCE READY</span>
+          <span class="intro-status-counter" id="intro-status-counter">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Instruction Hint -->
+    <div class="intro-hint">CLICK ANYWHERE OR PRESS ESC TO ENTER</div>
+
+    <!-- Interactive Skip Button -->
+    <button type="button" class="intro-skip-btn" id="intro-skip-btn" aria-label="Skip Introduction">
+      <span>SKIP INTRO</span>
+      <kbd>ESC</kbd>
+    </button>
+  </aside>
 
   <!-- Custom Inverted Difference Pointer -->
   <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
@@ -270,7 +330,6 @@
         <div class="marquee-item"><img src="assets/logo.png" alt="Navabharath Technologies" class="marquee-logo" /> Navabharath Tech</div>
         <div class="marquee-item"><img src="assets/tokensboy-logo.png" alt="Tokens Boy" class="marquee-logo" /> Tokens Boy</div>
         <div class="marquee-item"><img src="assets/nidhifresh-logo.png" alt="Nidhi Fresh Basket" class="marquee-logo" /> Nidhi Fresh Basket</div>
-        <div class="marquee-item"><img src="assets/carmart-logo.png" alt="Car Mart Mysore" class="marquee-logo carmart-logo" /> Car Mart Mysore</div>
         <div class="marquee-item"><img src="assets/mysore-handicrafts-logo.png" alt="Mysore Handicrafts" class="marquee-logo" /> Mysore Handicrafts</div>
         <div class="marquee-item"><img src="assets/sainik-hospital-logo.png" alt="Sainik Multispeciality Hospital" class="marquee-logo" /> Sainik Hospital</div>
         <div class="marquee-item"><img src="assets/ar-hospital-logo.png" alt="AR Hospital Mysuru" class="marquee-logo" /> AR Hospital Mysuru</div>
@@ -289,7 +348,6 @@
         <div class="marquee-item"><img src="assets/logo.png" alt="Navabharath Technologies" class="marquee-logo" /> Navabharath Tech</div>
         <div class="marquee-item"><img src="assets/tokensboy-logo.png" alt="Tokens Boy" class="marquee-logo" /> Tokens Boy</div>
         <div class="marquee-item"><img src="assets/nidhifresh-logo.png" alt="Nidhi Fresh Basket" class="marquee-logo" /> Nidhi Fresh Basket</div>
-        <div class="marquee-item"><img src="assets/carmart-logo.png" alt="Car Mart Mysore" class="marquee-logo carmart-logo" /> Car Mart Mysore</div>
         <div class="marquee-item"><img src="assets/mysore-handicrafts-logo.png" alt="Mysore Handicrafts" class="marquee-logo" /> Mysore Handicrafts</div>
         <div class="marquee-item"><img src="assets/sainik-hospital-logo.png" alt="Sainik Multispeciality Hospital" class="marquee-logo" /> Sainik Hospital</div>
         <div class="marquee-item"><img src="assets/ar-hospital-logo.png" alt="AR Hospital Mysuru" class="marquee-logo" /> AR Hospital Mysuru</div>
@@ -322,7 +380,6 @@
             <button class="filter-btn" data-filter="healthcare">Healthcare</button>
             <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
             <button class="filter-btn" data-filter="saas">SaaS &amp; Apps</button>
-            <button class="filter-btn" data-filter="marketplace">Marketplaces</button>
           </div>
 
           <div class="search-box">
@@ -339,306 +396,441 @@
       </div>
     </section>
 
-    <!-- SOCIAL MEDIA WORK SECTION -->
+            <!-- SOCIAL MEDIA WORK SECTION (12 Campaigns with 3D Artwork) -->
     <section class="social-media-section" id="social-media">
       <div class="container">
-        <div class="section-header reveal-on-scroll">
-          <span class="badge-gold">SOCIAL MEDIA WORK</span>
-          <h2 class="section-title">Our Recent Social Media <span class="text-gradient-gold">Campaigns</span></h2>
-          <p class="section-subtitle">
-            You can also explore some of our recent social media management, brand authority, and community engagement work:
-          </p>
+        
+        <!-- Split Section Header exactly as shown in reference image -->
+        <div class="social-header-split reveal-on-scroll">
+          <div class="social-header-left">
+            <div class="social-eyebrow">
+              <span class="eyebrow-dash"></span>
+              <span class="eyebrow-text">OUR FEATURED PROJECTS</span>
+            </div>
+            <h2 class="social-main-title">
+              Instagram Profiles <span class="text-gradient-gold">We Manage</span>
+            </h2>
+          </div>
+          <div class="social-header-right">
+            <p class="social-header-subtitle">
+              A glimpse of the brands we work with — creating meaningful content, engagement and growth.
+            </p>
+          </div>
         </div>
 
-        <div class="social-grid">
+        <!-- 12 Unified 3D Artwork Campaign Grid -->
+        <div class="social-grid-featured">
           
           <!-- 1. Madhuram Chowdry -->
           <div class="social-card reveal-on-scroll">
-            <div class="social-card-header">
-              <div class="insta-icon-badge">
-                <div class="social-avatar-img-wrap">
-                  <img src="assets/dr-madhuram-logo.png" alt="Madhuram Chowdry Logo" class="social-avatar-img pad-logo" />
+            <div class="social-card-art">
+              <img src="assets/social-card-art-madhuram.jpg" alt="Orthopedic Care" loading="lazy" />
+            </div>
+            <div class="social-card-content">
+              <div class="social-card-top">
+                <div class="social-avatar-box">
+                  <img src="assets/dr-madhuram-logo.png" alt="Madhuram Chowdry Logo" class="social-avatar-img" />
+                </div>
+                <div class="social-identity">
+                  <h3 class="social-card-title">Madhuram Chowdry</h3>
+                  <span class="social-card-category">ORTHOPEDIC CARE</span>
                 </div>
               </div>
-              <div>
-                <h3 class="social-card-title">Madhuram Chowdry</h3>
-                <span class="social-card-category">Orthopedic Care</span>
+              <a href="https://www.instagram.com/madhuramchowdry14/" target="_blank" rel="noopener noreferrer" class="social-handle-pill">
+                <i data-lucide="instagram" class="insta-glyph"></i>
+                <span>@madhuramchowdry14</span>
+              </a>
+              <p class="social-card-desc">
+                Medical health awareness, orthopedic treatments, patient education, and consultation campaigns.
+              </p>
+              <div class="social-btn-group">
+                <a href="https://www.instagram.com/madhuramchowdry14/" target="_blank" rel="noopener noreferrer" class="social-action-pill">
+                  <span>View on Instagram</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a href="https://www.instagram.com/madhuramchowdry14/" target="_blank" rel="noopener noreferrer" class="social-action-circle" aria-label="Open Madhuram Chowdry Instagram">
+                  <i data-lucide="arrow-right"></i>
+                </a>
               </div>
             </div>
-            <a href="https://www.instagram.com/madhuramchowdry14/" target="_blank" rel="noopener noreferrer" class="social-handle-link">
-              @madhuramchowdry14 <i data-lucide="arrow-up-right" style="width:14px;height:14px;"></i>
-            </a>
-            <p class="social-card-desc">Medical health awareness, orthopedic treatments, patient education, and consultation campaigns.</p>
-            <a href="https://www.instagram.com/madhuramchowdry14/" target="_blank" rel="noopener noreferrer" class="social-action-btn">
-              View on Instagram <i data-lucide="external-link" style="width:14px;height:14px;"></i>
-            </a>
           </div>
 
           <!-- 2. AR Hospital Mysuru -->
           <div class="social-card reveal-on-scroll">
-            <div class="social-card-header">
-              <div class="insta-icon-badge">
-                <div class="social-avatar-img-wrap">
-                  <img src="assets/ar-hospital-logo.png" alt="AR Hospital Mysuru Logo" class="social-avatar-img pad-logo" />
+            <div class="social-card-art">
+              <img src="assets/social-card-art-arhospital.jpg" alt="AR Hospital Mysuru building" loading="lazy" />
+            </div>
+            <div class="social-card-content">
+              <div class="social-card-top">
+                <div class="social-avatar-box">
+                  <img src="assets/ar-hospital-logo.png" alt="AR Hospital Mysuru Logo" class="social-avatar-img" />
+                </div>
+                <div class="social-identity">
+                  <h3 class="social-card-title">AR Hospital Mysuru</h3>
+                  <span class="social-card-category">MULTISPECIALITY HOSPITAL</span>
                 </div>
               </div>
-              <div>
-                <h3 class="social-card-title">AR Hospital Mysuru</h3>
-                <span class="social-card-category">Multispeciality Hospital</span>
+              <a href="https://www.instagram.com/ar_hospital_mysuru/" target="_blank" rel="noopener noreferrer" class="social-handle-pill">
+                <i data-lucide="instagram" class="insta-glyph"></i>
+                <span>@ar_hospital_mysuru</span>
+              </a>
+              <p class="social-card-desc">
+                Clinical infrastructure, community medical drives, health updates, and emergency hospital care campaigns.
+              </p>
+              <div class="social-btn-group">
+                <a href="https://www.instagram.com/ar_hospital_mysuru/" target="_blank" rel="noopener noreferrer" class="social-action-pill">
+                  <span>View on Instagram</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a href="https://www.instagram.com/ar_hospital_mysuru/" target="_blank" rel="noopener noreferrer" class="social-action-circle" aria-label="Open AR Hospital Instagram">
+                  <i data-lucide="arrow-right"></i>
+                </a>
               </div>
             </div>
-            <a href="https://www.instagram.com/ar_hospital_mysuru/" target="_blank" rel="noopener noreferrer" class="social-handle-link">
-              @ar_hospital_mysuru <i data-lucide="arrow-up-right" style="width:14px;height:14px;"></i>
-            </a>
-            <p class="social-card-desc">Clinical infrastructure, community medical drives, health updates, and emergency hospital care campaigns.</p>
-            <a href="https://www.instagram.com/ar_hospital_mysuru/" target="_blank" rel="noopener noreferrer" class="social-action-btn">
-              View on Instagram <i data-lucide="external-link" style="width:14px;height:14px;"></i>
-            </a>
           </div>
 
           <!-- 3. Dr. Gautam Cougati -->
           <div class="social-card reveal-on-scroll">
-            <div class="social-card-header">
-              <div class="insta-icon-badge">
-                <div class="social-avatar-img-wrap">
-                  <img src="assets/dr-gautam-cougati-logo.png" alt="Dr. Gautam Cougati Logo" class="social-avatar-img pad-logo" />
+            <div class="social-card-art">
+              <img src="assets/social-card-art-cougati.jpg" alt="Neurosurgery Brain Hologram" loading="lazy" />
+            </div>
+            <div class="social-card-content">
+              <div class="social-card-top">
+                <div class="social-avatar-box">
+                  <img src="assets/dr-gautam-cougati-logo.png" alt="Dr. Gautam Cougati Logo" class="social-avatar-img" />
+                </div>
+                <div class="social-identity">
+                  <h3 class="social-card-title">Dr. Gautam Cougati</h3>
+                  <span class="social-card-category">NEUROSURGEON</span>
                 </div>
               </div>
-              <div>
-                <h3 class="social-card-title">Dr. Gautam Cougati</h3>
-                <span class="social-card-category">Neurosurgeon</span>
+              <a href="https://www.instagram.com/neurosurgeon_goutham_cugati/" target="_blank" rel="noopener noreferrer" class="social-handle-pill">
+                <i data-lucide="instagram" class="insta-glyph"></i>
+                <span>@neurosurgeon_goutham_cugati</span>
+              </a>
+              <p class="social-card-desc">
+                Neurosurgery awareness, spine and brain surgical education, clinical expertise, and health reels.
+              </p>
+              <div class="social-btn-group">
+                <a href="https://www.instagram.com/neurosurgeon_goutham_cugati/" target="_blank" rel="noopener noreferrer" class="social-action-pill">
+                  <span>View on Instagram</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a href="https://www.instagram.com/neurosurgeon_goutham_cugati/" target="_blank" rel="noopener noreferrer" class="social-action-circle" aria-label="Open Dr. Gautam Cougati Instagram">
+                  <i data-lucide="arrow-right"></i>
+                </a>
               </div>
             </div>
-            <a href="https://www.instagram.com/neurosurgeon_goutham_cugati/" target="_blank" rel="noopener noreferrer" class="social-handle-link">
-              @neurosurgeon_goutham_cugati <i data-lucide="arrow-up-right" style="width:14px;height:14px;"></i>
-            </a>
-            <p class="social-card-desc">Neurosurgery awareness, spine and brain surgical education, clinical expertise, and health reels.</p>
-            <a href="https://www.instagram.com/neurosurgeon_goutham_cugati/" target="_blank" rel="noopener noreferrer" class="social-action-btn">
-              View on Instagram <i data-lucide="external-link" style="width:14px;height:14px;"></i>
-            </a>
           </div>
 
           <!-- 4. Navabharath Technologies -->
           <div class="social-card reveal-on-scroll">
-            <div class="social-card-header">
-              <div class="insta-icon-badge">
-                <div class="social-avatar-img-wrap">
-                  <img src="assets/logo.png" alt="Navabharath Technologies Logo" class="social-avatar-img pad-logo" />
+            <div class="social-card-art">
+              <img src="assets/social-card-art-navabharath.png" alt="Navabharath Technologies tech desk" loading="lazy" />
+            </div>
+            <div class="social-card-content">
+              <div class="social-card-top">
+                <div class="social-avatar-box">
+                  <img src="assets/nbt-shield-clean.png" alt="Navabharath Technologies Logo" class="social-avatar-img" />
+                </div>
+                <div class="social-identity">
+                  <h3 class="social-card-title">Navabharath Technologies</h3>
+                  <span class="social-card-category">TECH &amp; IT SOLUTIONS</span>
                 </div>
               </div>
-              <div>
-                <h3 class="social-card-title">Navabharath Technologies</h3>
-                <span class="social-card-category">Tech &amp; IT Solutions</span>
+              <a href="https://www.instagram.com/navabharathtechnologies/" target="_blank" rel="noopener noreferrer" class="social-handle-pill">
+                <i data-lucide="instagram" class="insta-glyph"></i>
+                <span>@navabharathtechnologies</span>
+              </a>
+              <p class="social-card-desc">
+                Agency milestones, tech innovation updates, client launches, and digital transformation tips.
+              </p>
+              <div class="social-btn-group">
+                <a href="https://www.instagram.com/navabharathtechnologies/" target="_blank" rel="noopener noreferrer" class="social-action-pill">
+                  <span>View on Instagram</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a href="https://www.instagram.com/navabharathtechnologies/" target="_blank" rel="noopener noreferrer" class="social-action-circle" aria-label="Open Navabharath Instagram">
+                  <i data-lucide="arrow-right"></i>
+                </a>
               </div>
             </div>
-            <a href="https://www.instagram.com/navabharathtechnologies/" target="_blank" rel="noopener noreferrer" class="social-handle-link">
-              @navabharathtechnologies <i data-lucide="arrow-up-right" style="width:14px;height:14px;"></i>
-            </a>
-            <p class="social-card-desc">Agency milestones, tech innovation updates, client launches, and digital transformation tips.</p>
-            <a href="https://www.instagram.com/navabharathtechnologies/" target="_blank" rel="noopener noreferrer" class="social-action-btn">
-              View on Instagram <i data-lucide="external-link" style="width:14px;height:14px;"></i>
-            </a>
           </div>
 
           <!-- 5. Nidhi Fresh Basket -->
           <div class="social-card reveal-on-scroll">
-            <div class="social-card-header">
-              <div class="insta-icon-badge">
-                <div class="social-avatar-img-wrap">
-                  <img src="assets/nidhifresh-logo.png" alt="Nidhi Fresh Basket Logo" class="social-avatar-img pad-logo" />
+            <div class="social-card-art">
+              <img src="assets/social-card-art-nidhifresh.png" alt="Fresh organic vegetables basket" loading="lazy" />
+            </div>
+            <div class="social-card-content">
+              <div class="social-card-top">
+                <div class="social-avatar-box">
+                  <img src="assets/nidhifresh-logo.png" alt="Nidhi Fresh Basket Logo" class="social-avatar-img" />
+                </div>
+                <div class="social-identity">
+                  <h3 class="social-card-title">Nidhi Fresh Basket</h3>
+                  <span class="social-card-category">FARM PRODUCE GROCERY</span>
                 </div>
               </div>
-              <div>
-                <h3 class="social-card-title">Nidhi Fresh Basket</h3>
-                <span class="social-card-category">Farm Produce Grocery</span>
+              <a href="https://www.instagram.com/nidhifreshbasket/" target="_blank" rel="noopener noreferrer" class="social-handle-pill">
+                <i data-lucide="instagram" class="insta-glyph"></i>
+                <span>@nidhifreshbasket</span>
+              </a>
+              <p class="social-card-desc">
+                Daily farm-fresh harvests, seasonal organic baskets, promotional deals, and home delivery announcements.
+              </p>
+              <div class="social-btn-group">
+                <a href="https://www.instagram.com/nidhifreshbasket/" target="_blank" rel="noopener noreferrer" class="social-action-pill">
+                  <span>View on Instagram</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a href="https://www.instagram.com/nidhifreshbasket/" target="_blank" rel="noopener noreferrer" class="social-action-circle" aria-label="Open Nidhi Fresh Basket Instagram">
+                  <i data-lucide="arrow-right"></i>
+                </a>
               </div>
             </div>
-            <a href="https://www.instagram.com/nidhifreshbasket/" target="_blank" rel="noopener noreferrer" class="social-handle-link">
-              @nidhifreshbasket <i data-lucide="arrow-up-right" style="width:14px;height:14px;"></i>
-            </a>
-            <p class="social-card-desc">Daily farm-fresh harvests, seasonal organic baskets, promotional deals, and home delivery announcements.</p>
-            <a href="https://www.instagram.com/nidhifreshbasket/" target="_blank" rel="noopener noreferrer" class="social-action-btn">
-              View on Instagram <i data-lucide="external-link" style="width:14px;height:14px;"></i>
-            </a>
           </div>
 
           <!-- 6. TokensBoy -->
           <div class="social-card reveal-on-scroll">
-            <div class="social-card-header">
-              <div class="insta-icon-badge">
-                <div class="social-avatar-img-wrap">
+            <div class="social-card-art">
+              <img src="assets/social-card-art-tokensboy.png" alt="Digital queue mobile application" loading="lazy" />
+            </div>
+            <div class="social-card-content">
+              <div class="social-card-top">
+                <div class="social-avatar-box">
                   <img src="assets/tokensboy-logo.png" alt="TokensBoy Logo" class="social-avatar-img" />
                 </div>
+                <div class="social-identity">
+                  <h3 class="social-card-title">TokensBoy</h3>
+                  <span class="social-card-category">HEALTHCARE SAAS</span>
+                </div>
               </div>
-              <div>
-                <h3 class="social-card-title">TokensBoy</h3>
-                <span class="social-card-category">Healthcare SaaS</span>
+              <a href="https://www.instagram.com/tokensboy/" target="_blank" rel="noopener noreferrer" class="social-handle-pill">
+                <i data-lucide="instagram" class="insta-glyph"></i>
+                <span>@tokensboy</span>
+              </a>
+              <p class="social-card-desc">
+                Clinic queue management solutions, digital token advantages, doctor testimonials, and app walkthroughs.
+              </p>
+              <div class="social-btn-group">
+                <a href="https://www.instagram.com/tokensboy/" target="_blank" rel="noopener noreferrer" class="social-action-pill">
+                  <span>View on Instagram</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a href="https://www.instagram.com/tokensboy/" target="_blank" rel="noopener noreferrer" class="social-action-circle" aria-label="Open TokensBoy Instagram">
+                  <i data-lucide="arrow-right"></i>
+                </a>
               </div>
             </div>
-            <a href="https://www.instagram.com/tokensboy/" target="_blank" rel="noopener noreferrer" class="social-handle-link">
-              @tokensboy <i data-lucide="arrow-up-right" style="width:14px;height:14px;"></i>
-            </a>
-            <p class="social-card-desc">Clinic queue management solutions, digital token advantages, doctor testimonials, and app walkthroughs.</p>
-            <a href="https://www.instagram.com/tokensboy/" target="_blank" rel="noopener noreferrer" class="social-action-btn">
-              View on Instagram <i data-lucide="external-link" style="width:14px;height:14px;"></i>
-            </a>
           </div>
 
           <!-- 7. FoodBox Mysuru -->
           <div class="social-card reveal-on-scroll">
-            <div class="social-card-header">
-              <div class="insta-icon-badge">
-                <div class="social-avatar-img-wrap">
-                  <img src="assets/foodbox-logo.png" alt="FoodBox Mysuru Logo" class="social-avatar-img pad-logo" />
+            <div class="social-card-art">
+              <img src="assets/social-card-art-foodbox.png" alt="FoodBox Gourmet Burger Dining" loading="lazy" />
+            </div>
+            <div class="social-card-content">
+              <div class="social-card-top">
+                <div class="social-avatar-box">
+                  <img src="assets/foodbox-logo.png" alt="FoodBox Mysuru Logo" class="social-avatar-img" />
+                </div>
+                <div class="social-identity">
+                  <h3 class="social-card-title">FoodBox Mysuru</h3>
+                  <span class="social-card-category">GOURMET DINING</span>
                 </div>
               </div>
-              <div>
-                <h3 class="social-card-title">FoodBox Mysuru</h3>
-                <span class="social-card-category">Gourmet Dining</span>
+              <a href="https://www.instagram.com/foodboxmysuru/" target="_blank" rel="noopener noreferrer" class="social-handle-pill">
+                <i data-lucide="instagram" class="insta-glyph"></i>
+                <span>@foodboxmysuru</span>
+              </a>
+              <p class="social-card-desc">
+                Delicious food visual showcases, weekend culinary specials, menu releases, and viral foodie reels.
+              </p>
+              <div class="social-btn-group">
+                <a href="https://www.instagram.com/foodboxmysuru/" target="_blank" rel="noopener noreferrer" class="social-action-pill">
+                  <span>View on Instagram</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a href="https://www.instagram.com/foodboxmysuru/" target="_blank" rel="noopener noreferrer" class="social-action-circle" aria-label="Open FoodBox Instagram">
+                  <i data-lucide="arrow-right"></i>
+                </a>
               </div>
             </div>
-            <a href="https://www.instagram.com/foodboxmysuru/" target="_blank" rel="noopener noreferrer" class="social-handle-link">
-              @foodboxmysuru <i data-lucide="arrow-up-right" style="width:14px;height:14px;"></i>
-            </a>
-            <p class="social-card-desc">Delicious food visual showcases, weekend culinary specials, menu releases, and viral foodie reels.</p>
-            <a href="https://www.instagram.com/foodboxmysuru/" target="_blank" rel="noopener noreferrer" class="social-action-btn">
-              View on Instagram <i data-lucide="external-link" style="width:14px;height:14px;"></i>
-            </a>
           </div>
 
           <!-- 8. Novus Health Labs -->
           <div class="social-card reveal-on-scroll">
-            <div class="social-card-header">
-              <div class="insta-icon-badge">
-                <div class="social-avatar-img-wrap">
-                  <img src="assets/novus-labs-logo.png" alt="Novus Health Labs Logo" class="social-avatar-img pad-logo" />
+            <div class="social-card-art">
+              <img src="assets/social-card-art-novus.png" alt="Novus Health Diagnostics Laboratory" loading="lazy" />
+            </div>
+            <div class="social-card-content">
+              <div class="social-card-top">
+                <div class="social-avatar-box">
+                  <img src="assets/novus-labs-logo.png" alt="Novus Health Labs Logo" class="social-avatar-img" />
+                </div>
+                <div class="social-identity">
+                  <h3 class="social-card-title">Novus Health Labs</h3>
+                  <span class="social-card-category">DIAGNOSTICS &amp; PATHOLOGY</span>
                 </div>
               </div>
-              <div>
-                <h3 class="social-card-title">Novus Health Labs</h3>
-                <span class="social-card-category">Diagnostics &amp; Pathology</span>
+              <a href="https://www.instagram.com/novushealthlabs/" target="_blank" rel="noopener noreferrer" class="social-handle-pill">
+                <i data-lucide="instagram" class="insta-glyph"></i>
+                <span>@novushealthlabs</span>
+              </a>
+              <p class="social-card-desc">
+                Preventive health test packages, home sample collection drives, pathology insights, and wellness tips.
+              </p>
+              <div class="social-btn-group">
+                <a href="https://www.instagram.com/novushealthlabs/" target="_blank" rel="noopener noreferrer" class="social-action-pill">
+                  <span>View on Instagram</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a href="https://www.instagram.com/novushealthlabs/" target="_blank" rel="noopener noreferrer" class="social-action-circle" aria-label="Open Novus Instagram">
+                  <i data-lucide="arrow-right"></i>
+                </a>
               </div>
             </div>
-            <a href="https://www.instagram.com/novushealthlabs/" target="_blank" rel="noopener noreferrer" class="social-handle-link">
-              @novushealthlabs <i data-lucide="arrow-up-right" style="width:14px;height:14px;"></i>
-            </a>
-            <p class="social-card-desc">Preventive health test packages, home sample collection drives, pathology insights, and wellness tips.</p>
-            <a href="https://www.instagram.com/novushealthlabs/" target="_blank" rel="noopener noreferrer" class="social-action-btn">
-              View on Instagram <i data-lucide="external-link" style="width:14px;height:14px;"></i>
-            </a>
           </div>
 
-          <!-- 9. Sainik Multispeciality Hospital -->
+          <!-- 9. Sainik Multispeciality -->
           <div class="social-card reveal-on-scroll">
-            <div class="social-card-header">
-              <div class="insta-icon-badge">
-                <div class="social-avatar-img-wrap">
-                  <img src="assets/sainik-hospital-logo.png" alt="Sainik Multispeciality Hospital Logo" class="social-avatar-img pad-logo" />
+            <div class="social-card-art">
+              <img src="assets/social-card-art-sainik.png" alt="Sainik Multispeciality Hospital Building" loading="lazy" />
+            </div>
+            <div class="social-card-content">
+              <div class="social-card-top">
+                <div class="social-avatar-box">
+                  <img src="assets/sainik-hospital-logo.png" alt="Sainik Hospital Logo" class="social-avatar-img" />
+                </div>
+                <div class="social-identity">
+                  <h3 class="social-card-title">Sainik Multispeciality</h3>
+                  <span class="social-card-category">HOSPITAL &amp; EMERGENCY</span>
                 </div>
               </div>
-              <div>
-                <h3 class="social-card-title">Sainik Multispeciality Hospital</h3>
-                <span class="social-card-category">Hospital &amp; Emergency</span>
+              <a href="https://www.instagram.com/sainik_hospital/" target="_blank" rel="noopener noreferrer" class="social-handle-pill">
+                <i data-lucide="instagram" class="insta-glyph"></i>
+                <span>@sainik_hospital</span>
+              </a>
+              <p class="social-card-desc">
+                Advanced emergency medical services, surgical camp announcements, doctor introductions, and OPD schedules.
+              </p>
+              <div class="social-btn-group">
+                <a href="https://www.instagram.com/sainik_hospital/" target="_blank" rel="noopener noreferrer" class="social-action-pill">
+                  <span>View on Instagram</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a href="https://www.instagram.com/sainik_hospital/" target="_blank" rel="noopener noreferrer" class="social-action-circle" aria-label="Open Sainik Hospital Instagram">
+                  <i data-lucide="arrow-right"></i>
+                </a>
               </div>
             </div>
-            <a href="https://www.instagram.com/sainikmultispeciality/" target="_blank" rel="noopener noreferrer" class="social-handle-link">
-              @sainikmultispeciality <i data-lucide="arrow-up-right" style="width:14px;height:14px;"></i>
-            </a>
-            <p class="social-card-desc">Advanced emergency medical services, surgical camp announcements, doctor introductions, and OPD schedules.</p>
-            <a href="https://www.instagram.com/sainikmultispeciality/" target="_blank" rel="noopener noreferrer" class="social-action-btn">
-              View on Instagram <i data-lucide="external-link" style="width:14px;height:14px;"></i>
-            </a>
           </div>
 
-          <!-- 10. Sulaksha Hospital -->
+          <!-- 10. Sulakshaa Hospital -->
           <div class="social-card reveal-on-scroll">
-            <div class="social-card-header">
-              <div class="insta-icon-badge">
-                <div class="social-avatar-img-wrap">
-                  <img src="assets/sulaksha-hospital-logo.png" alt="Sulaksha Hospital Logo" class="social-avatar-img pad-logo" />
+            <div class="social-card-art">
+              <img src="assets/social-card-art-sulaksha.png" alt="Sulakshaa Hospital Maternity & Child Care" loading="lazy" />
+            </div>
+            <div class="social-card-content">
+              <div class="social-card-top">
+                <div class="social-avatar-box">
+                  <img src="assets/sulaksha-hospital-logo.png" alt="Sulakshaa Hospital Logo" class="social-avatar-img" />
+                </div>
+                <div class="social-identity">
+                  <h3 class="social-card-title">Sulakshaa Hospital</h3>
+                  <span class="social-card-category">HEALTHCARE &amp; MATERNITY</span>
                 </div>
               </div>
-              <div>
-                <h3 class="social-card-title">Sulaksha Hospital</h3>
-                <span class="social-card-category">Healthcare &amp; Maternity</span>
+              <a href="https://www.instagram.com/sulakshaahospital/" target="_blank" rel="noopener noreferrer" class="social-handle-pill">
+                <i data-lucide="instagram" class="insta-glyph"></i>
+                <span>@sulakshaahospital</span>
+              </a>
+              <p class="social-card-desc">
+                Mother and child care guidance, laparoscopic surgeries, health awareness posts, and patient testimonials.
+              </p>
+              <div class="social-btn-group">
+                <a href="https://www.instagram.com/sulakshaahospital/" target="_blank" rel="noopener noreferrer" class="social-action-pill">
+                  <span>View on Instagram</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a href="https://www.instagram.com/sulakshaahospital/" target="_blank" rel="noopener noreferrer" class="social-action-circle" aria-label="Open Sulaksha Hospital Instagram">
+                  <i data-lucide="arrow-right"></i>
+                </a>
               </div>
             </div>
-            <a href="https://www.instagram.com/sulakshaahospital/" target="_blank" rel="noopener noreferrer" class="social-handle-link">
-              @sulakshaahospital <i data-lucide="arrow-up-right" style="width:14px;height:14px;"></i>
-            </a>
-            <p class="social-card-desc">Mother and child care guidance, laparoscopic surgeries, health awareness posts, and patient testimonials.</p>
-            <a href="https://www.instagram.com/sulakshaahospital/" target="_blank" rel="noopener noreferrer" class="social-action-btn">
-              View on Instagram <i data-lucide="external-link" style="width:14px;height:14px;"></i>
-            </a>
           </div>
 
           <!-- 11. Nethra Dharini -->
           <div class="social-card reveal-on-scroll">
-            <div class="social-card-header">
-              <div class="insta-icon-badge">
-                <div class="social-avatar-img-wrap">
-                  <img src="assets/nethra-dharini-logo.png" alt="Nethra Dharini Logo" class="social-avatar-img" />
+            <div class="social-card-art">
+              <img src="assets/social-card-art-nethra.png" alt="Nethra Dharini Super Speciality Eye Care" loading="lazy" />
+            </div>
+            <div class="social-card-content">
+              <div class="social-card-top">
+                <div class="social-avatar-box">
+                  <img src="assets/nethra-dharini-logo.png" alt="Nethra Dharini Eye Care Logo" class="social-avatar-img" />
+                </div>
+                <div class="social-identity">
+                  <h3 class="social-card-title">Nethra Dharini</h3>
+                  <span class="social-card-category">SUPER SPECIALITY EYE CARE</span>
                 </div>
               </div>
-              <div>
-                <h3 class="social-card-title">Nethra Dharini</h3>
-                <span class="social-card-category">Eye Care Hospital</span>
+              <a href="https://www.instagram.com/nethra_dharini/" target="_blank" rel="noopener noreferrer" class="social-handle-pill">
+                <i data-lucide="instagram" class="insta-glyph"></i>
+                <span>@nethra_dharini</span>
+              </a>
+              <p class="social-card-desc">
+                Cataract surgery clarity, retina care education, optical eyewear showcases, and vision care advice.
+              </p>
+              <div class="social-btn-group">
+                <a href="https://www.instagram.com/nethra_dharini/" target="_blank" rel="noopener noreferrer" class="social-action-pill">
+                  <span>View on Instagram</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a href="https://www.instagram.com/nethra_dharini/" target="_blank" rel="noopener noreferrer" class="social-action-circle" aria-label="Open Nethra Dharini Instagram">
+                  <i data-lucide="arrow-right"></i>
+                </a>
               </div>
             </div>
-            <a href="https://www.instagram.com/nethradharini/" target="_blank" rel="noopener noreferrer" class="social-handle-link">
-              @nethradharini <i data-lucide="arrow-up-right" style="width:14px;height:14px;"></i>
-            </a>
-            <p class="social-card-desc">Comprehensive vision care education, cataract surgery awareness, pediatric eye care, and eye checkup camps.</p>
-            <a href="https://www.instagram.com/nethradharini/" target="_blank" rel="noopener noreferrer" class="social-action-btn">
-              View on Instagram <i data-lucide="external-link" style="width:14px;height:14px;"></i>
-            </a>
           </div>
 
           <!-- 12. The Burger Hub Mysuru -->
           <div class="social-card reveal-on-scroll">
-            <div class="social-card-header">
-              <div class="insta-icon-badge">
-                <div class="social-avatar-img-wrap">
-                  <img src="assets/the-burger-hub-logo.png" alt="The Burger Hub Mysuru Logo" class="social-avatar-img" />
+            <div class="social-card-art">
+              <img src="assets/social-card-art-burgerhub.png" alt="The Burger Hub Burgers and Fries" loading="lazy" />
+            </div>
+            <div class="social-card-content">
+              <div class="social-card-top">
+                <div class="social-avatar-box">
+                  <img src="assets/the-burger-hub-logo.png" alt="The Burger Hub Logo" class="social-avatar-img" />
+                </div>
+                <div class="social-identity">
+                  <h3 class="social-card-title">The Burger Hub Mysuru</h3>
+                  <span class="social-card-category">FAST CASUAL DINING</span>
                 </div>
               </div>
-              <div>
-                <h3 class="social-card-title">The Burger Hub Mysuru</h3>
-                <span class="social-card-category">Fast Casual Dining</span>
+              <a href="https://www.instagram.com/theburgerhubmysuru/" target="_blank" rel="noopener noreferrer" class="social-handle-pill">
+                <i data-lucide="instagram" class="insta-glyph"></i>
+                <span>@theburgerhubmysuru</span>
+              </a>
+              <p class="social-card-desc">
+                Mouth-watering burger creations, combo launch reels, student discounts, and buzzing community dining vibes.
+              </p>
+              <div class="social-btn-group">
+                <a href="https://www.instagram.com/theburgerhubmysuru/" target="_blank" rel="noopener noreferrer" class="social-action-pill">
+                  <span>View on Instagram</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a href="https://www.instagram.com/theburgerhubmysuru/" target="_blank" rel="noopener noreferrer" class="social-action-circle" aria-label="Open Burger Hub Instagram">
+                  <i data-lucide="arrow-right"></i>
+                </a>
               </div>
             </div>
-            <a href="https://www.instagram.com/theburgerhubmysuru/" target="_blank" rel="noopener noreferrer" class="social-handle-link">
-              @theburgerhubmysuru <i data-lucide="arrow-up-right" style="width:14px;height:14px;"></i>
-            </a>
-            <p class="social-card-desc">Mouth-watering burger creations, combo launch reels, student discounts, and buzzing community dining vibes.</p>
-            <a href="https://www.instagram.com/theburgerhubmysuru/" target="_blank" rel="noopener noreferrer" class="social-action-btn">
-              View on Instagram <i data-lucide="external-link" style="width:14px;height:14px;"></i>
-            </a>
-          </div>
-
-          <!-- 13. Aashritha Hospital -->
-          <div class="social-card reveal-on-scroll">
-            <div class="social-card-header">
-              <div class="insta-icon-badge">
-                <div class="social-avatar-img-wrap">
-                  <img src="assets/aashritha-hospital-logo.png" alt="Aashritha Hospital Logo" class="social-avatar-img pad-logo" />
-                </div>
-              </div>
-              <div>
-                <h3 class="social-card-title">Aashritha Hospital</h3>
-                <span class="social-card-category">Neuropsychiatry &amp; Rehabilitation</span>
-              </div>
-            </div>
-            <a href="https://www.instagram.com/aashritha_hospital/" target="_blank" rel="noopener noreferrer" class="social-handle-link">
-              @aashritha_hospital <i data-lucide="arrow-up-right" style="width:14px;height:14px;"></i>
-            </a>
-            <p class="social-card-desc">Specialized neuro-psychiatry care, de-addiction programs, psychiatric rehabilitation, and mental wellness guidance.</p>
-            <a href="https://www.instagram.com/aashritha_hospital/" target="_blank" rel="noopener noreferrer" class="social-action-btn">
-              View on Instagram <i data-lucide="external-link" style="width:14px;height:14px;"></i>
-            </a>
           </div>
 
         </div>
+
       </div>
     </section>
 
@@ -1064,9 +1256,10 @@
   </a>
 
   <!-- Scripts -->
+  <script src="js/intro-splash.js?v=1"></script>
   <script src="js/hero-canvas.js?v=5"></script>
   <script src="js/scroll-rule.js?v=5"></script>
-  <script src="js/portfolio.js?v=7"></script>
+  <script src="js/portfolio.js?v=9"></script>
   <script src="js/estimator.js?v=5"></script>
   <script src="js/cursor.js?v=6"></script>
   <script src="js/app.js?v=5"></script>

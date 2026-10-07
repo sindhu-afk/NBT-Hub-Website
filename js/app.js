@@ -221,4 +221,21 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  // 6. Social Media Secondary Drawer Toggle
+  const socialToggleBtn = document.getElementById('social-toggle-btn');
+  const socialDrawer = document.getElementById('social-secondary-drawer');
+  if (socialToggleBtn && socialDrawer) {
+    socialToggleBtn.addEventListener('click', function () {
+      const isOpen = socialDrawer.classList.toggle('is-open');
+      const label = socialToggleBtn.querySelector('span');
+      if (label) {
+        label.textContent = isOpen ? 'Show Fewer Campaigns' : 'View All Partner Campaigns';
+      }
+      if (window.lucide) window.lucide.createIcons();
+      // Trigger scroll recalculation
+      window.dispatchEvent(new Event('scroll'));
+    });
+  }
 });
+

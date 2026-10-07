@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" fill="none">
+  <defs>
+    <linearGradient id="barGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="arrowGlow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E5A84B" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FCD34D" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+  <!-- Ascending Bar 1 -->
+  <rect x="100" y="125" width="16" height="35" rx="3" fill="url(#barGlow)" stroke="#34D399" stroke-width="1" stroke-opacity="0.3"/>
+  <!-- Ascending Bar 2 -->
+  <rect x="124" y="100" width="16" height="60" rx="3" fill="url(#barGlow)" stroke="#34D399" stroke-width="1" stroke-opacity="0.35"/>
+  <!-- Ascending Bar 3 -->
+  <rect x="148" y="75" width="16" height="85" rx="3" fill="url(#barGlow)" stroke="#34D399" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- Ascending Bar 4 -->
+  <rect x="172" y="48" width="16" height="112" rx="3" fill="url(#barGlow)" stroke="#34D399" stroke-width="1" stroke-opacity="0.45"/>
+  <!-- Arrow Path -->
+  <path d="M90,135 Q135,110 178,35" stroke="url(#arrowGlow)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Arrowhead -->
+  <polygon points="178,30 186,42 170,40" fill="#FCD34D" fill-opacity="0.45"/>
+</svg>

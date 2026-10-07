@@ -675,162 +675,251 @@
    ========================================================================== */
 .portfolio-matrix-wrap {
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: #0a2724;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 50px rgba(11, 41, 38, 0.35);
-  margin-top: 32px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin-top: 36px;
+  width: 100%;
 }
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: rgba(255, 255, 255, 0.08);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   width: 100%;
 }
 
 .portfolio-tile {
   position: relative;
-  height: 220px;
-  background: #0a2724; /* exact dark pine/emerald shade from reference image */
+  height: 320px;
+  background: linear-gradient(155deg, rgba(14, 43, 38, 0.88) 0%, rgba(7, 24, 21, 0.96) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: all 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Subtle Thematic Background Watermark Artwork */
+.portfolio-tile-watermark {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 175px;
+  height: 140px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.65;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.portfolio-tile-watermark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom right;
+}
+
+/* Top Logo Area */
+.portfolio-tile-top {
+  position: relative;
+  z-index: 2;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 32px 28px;
-  cursor: pointer;
-  overflow: hidden;
-  transition: background 0.35s ease;
-}
-
-.portfolio-tile:hover {
-  background: radial-gradient(circle at center, rgba(14, 165, 233, 0.16) 0%, rgba(212, 141, 48, 0.1) 60%, #071f1c 100%);
+  height: 110px;
 }
 
 .portfolio-tile-brand {
-  position: relative;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
-}
-
-.portfolio-tile:hover .portfolio-tile-brand {
-  transform: scale(1.08) translateY(-8px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .portfolio-tile-brand img {
-  max-width: 82%;
-  max-height: 110px;
+  max-width: 85%;
+  max-height: 85px;
   width: auto;
   height: auto;
   object-fit: contain;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.35));
+  transition: transform 0.4s ease;
 }
 
-/* Badge for light images / cards like Malnad Meadows style in reference */
+/* White plate for boxed client logos (TokensBoy, Nidhi Fresh, Traditional Crafts, JKD Mart, Vyapar One) */
 .portfolio-tile-brand.with-plate img {
-  background: #182e2b;
+  background: #FFFFFF;
   padding: 10px 18px;
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  max-height: 75px;
 }
 
-/* Sleek Hover Information Overlay */
-.portfolio-tile-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 14px 12px;
-  background: linear-gradient(180deg, transparent 0%, rgba(4, 18, 16, 0.94) 40%, #031210 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+/* Bottom Content Area */
+.portfolio-tile-bottom {
+  position: relative;
   z-index: 2;
-  pointer-events: none;
-}
-
-.portfolio-tile:hover .portfolio-tile-overlay {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+  width: 100%;
 }
 
 .portfolio-tile-title {
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: #FFFFFF;
-  margin-bottom: 2px;
-  letter-spacing: 0.3px;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.01em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 95%;
 }
 
-.portfolio-tile-category {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 600;
-  color: var(--gold-light);
-  letter-spacing: 1.2px;
+.portfolio-tile-tagline {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  color: #E5A84B;
+  display: block;
+  margin-bottom: 16px;
 }
 
-.portfolio-tile-actions {
+/* Action Area with Default Circle Arrow vs Hover Dual Pills */
+.portfolio-tile-action-wrap {
+  position: relative;
+  width: 100%;
+  height: 38px;
+}
+
+/* Default State: Golden Circle Arrow Button */
+.portfolio-tile-circle-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(229, 168, 75, 0.45);
+  background: rgba(0, 0, 0, 0.25);
+  color: #E5A84B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+}
+
+.portfolio-tile-circle-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+/* Hover Dual Pills Container */
+.portfolio-tile-hover-pills {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.portfolio-action-btn {
+.portfolio-pill-btn {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 4px 12px;
-  font-size: 0.72rem;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 9999px;
   font-family: var(--font-heading);
+  font-size: 0.78rem;
   font-weight: 600;
-  border-radius: var(--radius-full);
   text-decoration: none;
-  transition: all 0.25s ease;
   cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
 }
 
-.portfolio-action-btn.btn-study {
-  background: rgba(255, 255, 255, 0.12);
-  color: #F1F5F9;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.portfolio-action-btn.btn-study:hover {
-  background: rgba(255, 255, 255, 0.25);
+.portfolio-pill-btn.pill-study {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   color: #FFFFFF;
-  border-color: #FFFFFF;
+  backdrop-filter: blur(10px);
 }
 
-.portfolio-action-btn.btn-live {
-  background: var(--gold-primary);
-  color: #07111E;
-  border: 1px solid var(--gold-primary);
+.portfolio-pill-btn.pill-study:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
-.portfolio-action-btn.btn-live:hover {
-  background: var(--gold-hover);
-  box-shadow: 0 0 12px var(--gold-glow);
+.portfolio-pill-btn.pill-live {
+  background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 100%);
+  border: none;
+  color: #081A17;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+}
+
+.portfolio-pill-btn.pill-live:hover {
+  background: linear-gradient(135deg, #FFFBEB 0%, #FBBF24 100%);
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.55);
+  transform: scale(1.03);
+}
+
+.portfolio-pill-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.2;
+}
+
+/* ==========================================================================
+   HOVER & ACTIVE STATES (MATCHING TOKENSBOY CARD IN USER MOCKUP)
+   ========================================================================== */
+.portfolio-tile:hover,
+.portfolio-tile.is-featured-active {
+  background: radial-gradient(ellipse at 50% 0%, rgba(245, 158, 11, 0.25) 0%, rgba(14, 43, 38, 0.95) 70%);
+  border-color: rgba(245, 158, 11, 0.75);
+  box-shadow: 0 0 32px rgba(245, 158, 11, 0.28), 0 20px 44px rgba(0, 0, 0, 0.55);
+  transform: translateY(-4px);
+}
+
+.portfolio-tile:hover .portfolio-tile-watermark,
+.portfolio-tile.is-featured-active .portfolio-tile-watermark {
+  opacity: 0.95;
+  transform: scale(1.06);
+}
+
+.portfolio-tile:hover .portfolio-tile-circle-btn,
+.portfolio-tile.is-featured-active .portfolio-tile-circle-btn {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+}
+
+.portfolio-tile:hover .portfolio-tile-hover-pills,
+.portfolio-tile.is-featured-active .portfolio-tile-hover-pills {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.portfolio-tile:hover .portfolio-tile-brand,
+.portfolio-tile.is-featured-active .portfolio-tile-brand {
+  transform: scale(1.05);
 }
 
 .portfolio-official-box {
@@ -861,158 +950,367 @@
 /* --------------------------------------------------------------------------
    6B. SOCIAL MEDIA MARKETING SHOWCASE
    -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   6B. SOCIAL MEDIA MARKETING SHOWCASE (MOCKUP ACCURATE)
+   -------------------------------------------------------------------------- */
 .social-media-section {
-  padding: 100px 0;
+  padding: 110px 0 90px 0;
   position: relative;
-  background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(8, 18, 34, 0.85) 50%, var(--bg-deep) 100%);
-}
-
-.social-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
-}
-
-.social-card {
-  padding: 24px;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(145deg, rgba(14, 28, 48, 0.7) 0%, rgba(7, 16, 28, 0.9) 100%);
-  border: 1px solid rgba(203, 213, 225, 0.12);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.5);
-  position: relative;
+  background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(6, 15, 28, 0.95) 50%, var(--bg-deep) 100%);
   overflow: hidden;
 }
 
-.social-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+/* Split Header Layout */
+.social-header-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.social-header-left {
+  max-width: 600px;
+}
+
+.social-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.social-eyebrow .eyebrow-dash {
+  width: 28px;
   height: 2px;
-  background: linear-gradient(90deg, #fdf497, #fd5949, #d6249f, #285AEB);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  background: var(--gold-primary, #D48D30);
+  box-shadow: 0 0 8px rgba(212, 141, 48, 0.6);
+  display: inline-block;
+}
+
+.social-eyebrow .eyebrow-text {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--gold-primary, #D48D30);
+  text-transform: uppercase;
+}
+
+.social-main-title {
+  font-family: var(--font-heading, sans-serif);
+  font-size: clamp(2rem, 3.8vw, 2.75rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.social-header-right {
+  max-width: 420px;
+  text-align: right;
+}
+
+.social-header-subtitle {
+  font-size: 0.92rem;
+  color: var(--silver-steel, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 3-Column Featured Campaigns Grid */
+.social-grid-featured {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Social Card Design */
+.social-card {
+  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(13, 27, 45, 0.85) 0%, rgba(6, 14, 25, 0.96) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
 }
 
 .social-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(212, 141, 48, 0.4);
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 24px rgba(214, 36, 159, 0.2);
+  transform: translateY(-6px);
+  border-color: rgba(212, 141, 48, 0.45);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.75), 0 0 28px rgba(212, 141, 48, 0.18);
 }
 
-.social-card:hover::before {
-  opacity: 1;
+/* Right-Side Atmospheric Artwork */
+.social-card-art {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 24%, black 70%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 24%, black 70%);
 }
 
-.social-card-header {
+.social-card-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.social-card:hover .social-card-art img {
+  transform: scale(1.08);
+}
+
+/* Card Foreground Content */
+.social-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 1;
+}
+
+/* Top: Client Identity */
+.social-card-top {
   display: flex;
   align-items: center;
   gap: 14px;
   margin-bottom: 12px;
 }
 
-.insta-icon-badge {
-  position: relative;
+.social-avatar-box {
   width: 48px;
   height: 48px;
-  border-radius: 14px;
-  padding: 2.5px;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border-radius: 12px;
+  background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 5px;
   flex-shrink: 0;
-  box-shadow: 0 4px 15px rgba(214, 36, 159, 0.35);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease;
 }
 
-.social-card:hover .insta-icon-badge {
-  transform: scale(1.08) rotate(-2deg);
-  box-shadow: 0 8px 24px rgba(214, 36, 159, 0.55), 0 0 16px rgba(253, 89, 73, 0.4);
-}
-
-.social-avatar-img-wrap {
-  width: 100%;
-  height: 100%;
-  border-radius: 11px;
-  background: #091524;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.social-card:hover .social-avatar-box {
+  transform: scale(1.05) rotate(-1deg);
 }
 
 .social-avatar-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
-.social-avatar-img.pad-logo {
-  object-fit: contain;
-  padding: 4px;
-  background: rgba(255, 255, 255, 0.96);
-}
-
-.social-avatar-insta-icon {
-  display: none !important;
+.social-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .social-card-title {
-  font-family: var(--font-heading);
+  font-family: var(--font-heading, sans-serif);
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--silver-light);
+  color: #FFFFFF;
   line-height: 1.25;
+  margin: 0;
 }
 
 .social-card-category {
-  font-size: 0.72rem;
-  color: var(--gold-primary);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--gold-light, #F5B056);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-top: 2px;
 }
 
+/* Handle Link */
+.social-handle-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #E1306C;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  width: fit-content;
+}
+
+.social-handle-pill .insta-glyph {
+  width: 15px;
+  height: 15px;
+  stroke: #E1306C;
+}
+
+.social-handle-pill:hover {
+  opacity: 0.85;
+  transform: translateX(2px);
+}
+
+/* Card Description */
 .social-card-desc {
-  font-size: 0.85rem;
-  color: var(--silver-steel);
+  font-size: 0.82rem;
+  color: var(--silver-steel, #94A3B8);
   line-height: 1.5;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  max-width: 66%;
   flex-grow: 1;
 }
 
-.social-action-btn {
+/* Action Button Duo */
+.social-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.social-action-pill {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
-  width: 100%;
-  padding: 10px 14px;
-  border-radius: 10px;
-  font-size: 0.82rem;
+  padding: 8px 18px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--silver-light, #F1F5F9);
+  font-size: 0.78rem;
   font-weight: 600;
-  background: rgba(203, 213, 225, 0.06);
-  border: 1px solid rgba(203, 213, 225, 0.15);
-  color: var(--silver-light);
   text-decoration: none;
   transition: all 0.25s ease;
 }
 
-.social-action-btn:hover {
-  background: linear-gradient(135deg, rgba(214, 36, 159, 0.25) 0%, rgba(40, 90, 235, 0.25) 100%);
-  border-color: rgba(214, 36, 159, 0.5);
-  color: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(214, 36, 159, 0.25);
+.social-action-pill i {
+  width: 14px;
+  height: 14px;
 }
+
+.social-action-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--gold-light, #F5B056);
+  color: #07111E;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  box-shadow: 0 0 14px rgba(245, 176, 86, 0.4);
+}
+
+.social-action-circle i {
+  width: 16px;
+  height: 16px;
+  stroke: #07111E;
+  stroke-width: 2.2;
+}
+
+.social-card:hover .social-action-pill {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--gold-light, #F5B056);
+  color: #FFFFFF;
+}
+
+.social-card:hover .social-action-circle {
+  transform: scale(1.08) translateX(2px);
+  box-shadow: 0 0 22px rgba(245, 176, 86, 0.7);
+}
+
+/* Secondary Drawer for Additional Campaigns */
+.social-more-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.social-toggle-btn {
+  background: rgba(13, 27, 45, 0.6);
+  border: 1px solid rgba(203, 213, 225, 0.2);
+  color: var(--silver-light, #F1F5F9);
+  padding: 10px 24px;
+  border-radius: 99px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-toggle-btn:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(212, 141, 48, 0.25);
+}
+
+.social-secondary-drawer {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.social-secondary-drawer.is-open {
+  display: grid;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1100px) {
+  .social-grid-featured,
+  .social-secondary-drawer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .social-header-split {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .social-header-right {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .social-grid-featured,
+  .social-secondary-drawer {
+    grid-template-columns: 1fr;
+  }
+
+  .social-card-desc {
+    max-width: 85%;
+  }
+}
+
 
 /* --------------------------------------------------------------------------
    6C. OUR TEAM SECTION
@@ -2244,14 +2542,15 @@
   }
 
   .portfolio-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
   .portfolio-tile {
-    height: 195px;
+    height: 300px;
     padding: 22px 18px;
   }
   .portfolio-tile-brand img {
-    max-height: 95px;
+    max-height: 80px;
   }
 }
 
@@ -2436,11 +2735,12 @@
 
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
   .portfolio-tile {
-    height: 175px;
-    padding: 20px 14px;
+    height: 290px;
+    padding: 20px 16px;
   }
 
   .portfolio-tile:last-child:nth-child(odd) {
@@ -2448,7 +2748,7 @@
   }
 
   .portfolio-tile-brand img {
-    max-height: 80px;
+    max-height: 75px;
   }
 
   .modal-content {
@@ -2576,41 +2876,33 @@
   }
 
   .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .portfolio-tile {
-    height: 145px;
-    padding: 16px 10px;
+    height: 280px;
+    padding: 20px 16px;
   }
 
   .portfolio-tile-brand img {
-    max-height: 62px;
+    max-height: 72px;
     max-width: 86%;
   }
 
   .portfolio-tile-brand.with-plate img {
-    padding: 6px 12px;
-    border-radius: 12px;
-  }
-
-  .portfolio-tile-overlay {
-    padding: 10px 8px;
+    padding: 8px 14px;
+    border-radius: 14px;
   }
 
   .portfolio-tile-title {
-    font-size: 0.8rem;
-    margin-bottom: 2px;
+    font-size: 1rem;
+    margin-bottom: 3px;
   }
 
-  .portfolio-tile-category {
-    font-size: 0.58rem;
-    margin-bottom: 6px;
-  }
-
-  .portfolio-action-btn {
-    padding: 3px 8px;
-    font-size: 0.65rem;
+  .portfolio-tile-tagline {
+    font-size: 0.7rem;
+    margin-bottom: 12px;
   }
 
   .services-select-grid {

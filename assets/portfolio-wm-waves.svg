@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" fill="none">
+  <defs>
+    <linearGradient id="goldSilk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5A84B" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#D4AF37" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#996515" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <path d="M-20,160 C30,120 70,150 120,110 C160,80 180,100 220,60 L220,160 Z" fill="url(#goldSilk)"/>
+  <path d="M10,160 C60,110 100,135 150,95 C180,70 195,85 220,50" stroke="#E5A84B" stroke-width="1.5" stroke-opacity="0.3" fill="none"/>
+  <path d="M40,160 C80,120 120,140 170,105 C190,90 205,95 220,70" stroke="#E5A84B" stroke-width="1" stroke-opacity="0.2" fill="none"/>
+  <path d="M-10,140 C40,90 90,120 140,80 C175,55 190,65 220,35" stroke="#E5A84B" stroke-width="0.75" stroke-opacity="0.15" fill="none"/>
+</svg>

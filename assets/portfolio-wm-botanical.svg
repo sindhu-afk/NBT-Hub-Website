@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" fill="none">
+  <defs>
+    <linearGradient id="nidhiLeaves" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4ADE80" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#22C55E" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+  <!-- Broad Leaf 1 -->
+  <path d="M110,160 C120,100 170,80 200,90 C180,135 150,155 110,160 Z" fill="url(#nidhiLeaves)" stroke="#4ADE80" stroke-width="1" stroke-opacity="0.3"/>
+  <path d="M110,160 Q155,115 198,92" stroke="#4ADE80" stroke-width="1" stroke-opacity="0.35" fill="none"/>
+  <!-- Broad Leaf 2 -->
+  <path d="M140,160 C145,120 185,100 200,120 C190,150 170,160 140,160 Z" fill="url(#nidhiLeaves)" stroke="#4ADE80" stroke-width="0.8" stroke-opacity="0.25"/>
+  <!-- Subtle Sprout / Vine -->
+  <path d="M160,110 Q140,80 165,60 Q180,50 195,65 Q180,90 160,110 Z" fill="url(#nidhiLeaves)" stroke="#4ADE80" stroke-width="0.8" stroke-opacity="0.25"/>
+</svg>

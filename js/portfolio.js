@@ -226,7 +226,7 @@ function renderPortfolioGrid(filter = 'all', searchQuery = '') {
 
   if (filtered.length === 0) {
     container.innerHTML = `
-      <div style="grid-column: 1/-1; text-align: center; padding: 70px 20px; background: rgba(10, 39, 36, 0.6); border-radius: 20px; border: 1px solid rgba(255,255,255,0.08); color: var(--silver-steel);">
+      <div style="grid-column: 1/-1; text-align: center; padding: 70px 20px; background: rgba(13, 25, 42, 0.85); border-radius: 20px; border: 1px solid rgba(192, 205, 225, 0.16); color: var(--silver-steel);">
         <p style="font-size: 1.2rem; font-family: var(--font-heading); color: #FFFFFF;">No projects found matching your query.</p>
         <p style="font-size: 0.9rem; margin-top: 8px;">Try clearing your search or selecting another category.</p>
       </div>
@@ -306,7 +306,7 @@ function openCaseStudyModal(projectId) {
 
   modalBody.innerHTML = `
     <div style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
-      ${project.isLogo ? `<img src="${project.logoImg}" alt="${project.title} Logo" style="height:52px; width:auto; max-width:85px; border-radius:12px; object-fit:contain; background:#182e2b; padding:8px; border:1px solid rgba(255,255,255,0.12);" />` : ''}
+      ${project.isLogo ? `<img src="${project.logoImg}" alt="${project.title} Logo" style="height:52px; width:auto; max-width:85px; border-radius:12px; object-fit:contain; background:#0d192a; padding:8px; border:1px solid rgba(192,205,225,0.18);" />` : ''}
       <div>
         <h2 class="text-silver modal-title-text" style="margin-bottom:4px;">${project.title}</h2>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
@@ -316,7 +316,7 @@ function openCaseStudyModal(projectId) {
       </div>
     </div>
     
-    <div class="project-thumb-wrapper ${project.isLogo ? 'has-logo' : ''}" style="margin-bottom:24px; border-radius:16px; background: #0a2724; border: 1px solid rgba(255,255,255,0.08);">
+    <div class="project-thumb-wrapper ${project.isLogo ? 'has-logo' : ''}" style="margin-bottom:24px; border-radius:16px; background: #0d192a; border: 1px solid rgba(192,205,225,0.18);">
       <img src="${project.coverImg}" alt="${project.title}" class="modal-project-img" style="margin-bottom:0; max-height:170px; object-fit:contain;" />
     </div>
 

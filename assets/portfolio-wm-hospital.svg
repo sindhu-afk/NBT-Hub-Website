@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" fill="none">
   <defs>
     <linearGradient id="hospGlow" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#34D399" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#059669" stop-opacity="0.05"/>
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.05"/>
     </linearGradient>
   </defs>
   <!-- Hospital Building Silhouette -->
-  <g fill="url(#hospGlow)" stroke="#34D399" stroke-width="1" stroke-opacity="0.22">
+  <g fill="url(#hospGlow)" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.22">
     <!-- Main Center Tower -->
     <path d="M120,160 L120,60 L180,60 L180,160 Z"/>
     <!-- Central Pediment / Helipad / Header -->
@@ -17,7 +17,7 @@
     <path d="M180,160 L180,95 L200,95 L200,160 Z"/>
   </g>
   <!-- Medical Emergency Cross on Center Tower -->
-  <g fill="#34D399" fill-opacity="0.35">
+  <g fill="#38BDF8" fill-opacity="0.35">
     <rect x="146" y="70" width="8" height="24" rx="1.5"/>
     <rect x="138" y="78" width="24" height="8" rx="1.5"/>
   </g>

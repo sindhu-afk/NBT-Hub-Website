@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" fill="none">
   <defs>
     <linearGradient id="leafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#34D399" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#10B981" stop-opacity="0.1"/>
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#1E3A8A" stop-opacity="0.1"/>
     </linearGradient>
   </defs>
-  <path d="M120,160 Q150,110 170,40" stroke="#34D399" stroke-width="1.8" stroke-opacity="0.3" stroke-linecap="round" fill="none"/>
+  <path d="M120,160 Q150,110 170,40" stroke="#38BDF8" stroke-width="1.8" stroke-opacity="0.3" stroke-linecap="round" fill="none"/>
   <!-- Leaf 1 -->
-  <path d="M170,40 C175,25 195,30 190,48 C185,60 170,45 170,40 Z" fill="url(#leafGrad)" stroke="#34D399" stroke-width="0.8" stroke-opacity="0.4"/>
+  <path d="M170,40 C175,25 195,30 190,48 C185,60 170,45 170,40 Z" fill="url(#leafGrad)" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.4"/>
   <!-- Leaf 2 -->
-  <path d="M162,65 C180,55 195,68 185,82 C175,90 160,75 162,65 Z" fill="url(#leafGrad)" stroke="#34D399" stroke-width="0.8" stroke-opacity="0.4"/>
+  <path d="M162,65 C180,55 195,68 185,82 C175,90 160,75 162,65 Z" fill="url(#leafGrad)" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.4"/>
   <!-- Leaf 3 -->
-  <path d="M152,90 C135,78 125,92 135,105 C145,115 155,100 152,90 Z" fill="url(#leafGrad)" stroke="#34D399" stroke-width="0.8" stroke-opacity="0.35"/>
+  <path d="M152,90 C135,78 125,92 135,105 C145,115 155,100 152,90 Z" fill="url(#leafGrad)" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.35"/>
   <!-- Leaf 4 -->
-  <path d="M142,115 C160,105 175,118 165,132 C155,140 140,125 142,115 Z" fill="url(#leafGrad)" stroke="#34D399" stroke-width="0.8" stroke-opacity="0.35"/>
+  <path d="M142,115 C160,105 175,118 165,132 C155,140 140,125 142,115 Z" fill="url(#leafGrad)" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.35"/>
   <!-- Leaf 5 -->
-  <path d="M130,138 C115,128 108,142 118,152 C126,158 135,148 130,138 Z" fill="url(#leafGrad)" stroke="#34D399" stroke-width="0.8" stroke-opacity="0.3"/>
+  <path d="M130,138 C115,128 108,142 118,152 C126,158 135,148 130,138 Z" fill="url(#leafGrad)" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.3"/>
 </svg>

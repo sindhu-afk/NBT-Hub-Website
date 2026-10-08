@@ -40,7 +40,7 @@ const PORTFOLIO_DATA = [
     isLogo: true,
     tags: ['Corporate Hub', 'IT Services', 'Digital Solutions'],
     shortDesc: 'The flagship digital hub and enterprise agency portal powering next-generation IT and software solutions.',
-    fullDesc: 'The official digital enterprise portal of Navabharath Technologies (NBT HUB), architected with custom modern components, real-time interactive project estimators, and dynamic portfolio showcases.',
+    fullDesc: 'The official digital enterprise portal of Navabharath Technologies, architected with custom modern components, real-time interactive project estimators, and dynamic portfolio showcases.',
     results: [
       '50+ Active digital clients and successful deployments',
       'Full-stack in-house software, web & mobile app engineering',

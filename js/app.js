@@ -104,39 +104,49 @@ document.addEventListener('DOMContentLoaded', function () {
     runCounters();
   }
 
-  // 5. Service Trigger & "KNOW MORE" Actions
+  // 5. Service Trigger & Card Click Actions
   const serviceTriggers = document.querySelectorAll('[data-service-trigger]');
+  const serviceCards = document.querySelectorAll('.service-luxury-card[data-service]');
   const contactServiceSelect = document.getElementById('contact-service-select');
   const contactSection = document.getElementById('contact');
   const contactDetailsInput = document.querySelector('.contact-textarea');
 
+  function triggerServiceInquiry(serviceName) {
+    if (contactServiceSelect && serviceName) {
+      contactServiceSelect.value = serviceName;
+    }
+
+    if (contactDetailsInput && serviceName) {
+      contactDetailsInput.placeholder = `Tell us about your ${serviceName} project goals, timeline, and requirements...`;
+      contactDetailsInput.focus();
+    }
+
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      const formPanel = document.querySelector('.contact-glass-card');
+      if (formPanel) {
+        formPanel.style.transition = 'all 0.5s ease';
+        formPanel.style.borderColor = 'var(--cyber-blue)';
+        formPanel.style.boxShadow = '0 0 40px rgba(0, 198, 255, 0.35)';
+        setTimeout(function () {
+          formPanel.style.borderColor = '';
+          formPanel.style.boxShadow = '';
+        }, 2200);
+      }
+    }
+  }
+
   serviceTriggers.forEach(function (btn) {
     btn.addEventListener('click', function (e) {
       e.preventDefault();
-      const serviceName = this.getAttribute('data-service-trigger');
-      
-      if (contactServiceSelect && serviceName) {
-        contactServiceSelect.value = serviceName;
-      }
+      triggerServiceInquiry(this.getAttribute('data-service-trigger'));
+    });
+  });
 
-      if (contactDetailsInput && serviceName) {
-        contactDetailsInput.placeholder = `Tell us about your ${serviceName} project goals, timeline, and requirements...`;
-        contactDetailsInput.focus();
-      }
-
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-        const formPanel = document.querySelector('.contact-glass-card');
-        if (formPanel) {
-          formPanel.style.transition = 'all 0.5s ease';
-          formPanel.style.borderColor = 'var(--cyber-blue)';
-          formPanel.style.boxShadow = '0 0 40px rgba(0, 198, 255, 0.35)';
-          setTimeout(function () {
-            formPanel.style.borderColor = '';
-            formPanel.style.boxShadow = '';
-          }, 2200);
-        }
-      }
+  serviceCards.forEach(function (card) {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', function () {
+      triggerServiceInquiry(this.getAttribute('data-service'));
     });
   });
 

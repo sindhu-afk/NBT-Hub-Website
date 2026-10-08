@@ -154,7 +154,7 @@ app.use((req, res) => {
 function startServer(port) {
   const server = app.listen(port, () => {
     console.log(`\n==================================================`);
-    console.log(`🚀 NBT HUB Server running at: http://localhost:${port}`);
+    console.log(`🚀 Navabharath Technologies Server running at: http://localhost:${port}`);
     console.log(`📊 Connected to DB: localhost\\SQLEXPRESS (NBT_Hub_Portal)`);
     console.log(`==================================================\n`);
   });

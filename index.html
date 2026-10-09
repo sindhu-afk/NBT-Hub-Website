@@ -15,7 +15,7 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/main.css?v=5" />
-  <link rel="stylesheet" href="css/components.css?v=12" />
+  <link rel="stylesheet" href="css/components.css?v=14" />
   <link rel="stylesheet" href="css/animations.css?v=5" />
   <link rel="stylesheet" href="css/intro-splash.css?v=1" />
 </head>
@@ -132,36 +132,68 @@
   <!-- Main Content Area -->
   <main>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION - FRACTALINK CINEMATIC VIDEO SHOWCASE -->
     <section class="hero-section" id="hero">
-      <canvas id="hero-canvas"></canvas>
+      <div class="hero-video-wrapper" id="hero-video-wrapper">
+        <video 
+          class="hero-video-element" 
+          id="hero-video-element"
+          poster="assets/videos/hero-poster.jpg"
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          preload="auto"
+          aria-label="Navabharath Technologies Experience Video"
+        >
+          <source src="assets/videos/hero-video.mp4" type="video/mp4" />
+        </video>
 
-      <div class="container hero-content">
-        <div style="display:flex; justify-content:center; margin-bottom: 24px;">
-          <div class="hero-logo-box animate-float">
-            <img src="assets/logo.png" alt="NAVABHARATH TECHNOLOGIES Logo" class="brand-logo-img" />
-          </div>
-        </div>
+        <!-- Translucent cinematic gradient overlay for contrast -->
+        <div class="hero-video-shade"></div>
+      </div>
 
-        <div class="badge-gold shimmer-gold hero-badge" style="margin: 0 auto 16px auto;">
+      <!-- Minimalist Video Play / Pause Toggle Pill (Fractalink Inspired) -->
+      <div class="hero-video-action" id="hero-video-action">
+        <button 
+          type="button" 
+          class="hero-video-pill-btn" 
+          id="hero-video-pill-btn" 
+          aria-label="Toggle video playback"
+          title="Toggle video playback"
+        >
+          <span class="pill-icon pill-pause" id="pill-pause">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M6 4h4v16H6zm8 0h4v16h-4z"/>
+            </svg>
+          </span>
+          <span class="pill-icon pill-play" id="pill-play" style="display:none;">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </span>
+          <span class="pill-text" id="pill-text">LIVE AMBIENT</span>
+          <span class="pill-live-dot" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- Hero Content Overlay (Clean, Bold, Uncluttered) -->
+      <div class="container hero-content-showcase">
+        <div class="badge-gold shimmer-gold hero-badge" style="margin: 0 auto 20px auto;">
           INNOVATE • BUILD • ELEVATE
         </div>
 
-        <h1 class="hero-title">
-          Transforming Ideas into <br />
-          <span class="text-gradient-gold">Powerful Digital Solutions</span>
+        <h1 class="hero-showcase-title">
+          Start Your Future With Us. <br />
+          <span class="hero-gold-text">We Have Expertise Engineering Team</span>
         </h1>
 
-        <p class="hero-description">
-          Empowering enterprises, healthcare specialists, and high-growth brands with custom web platforms, intelligent mobile apps, AI automation, and ROI-driven digital media.
-        </p>
-
         <div class="hero-cta-group">
-          <a href="#portfolio" class="btn btn-primary-gold">
-            Explore Portfolio <i data-lucide="eye" style="width:18px;height:18px;"></i>
+          <a href="#services" class="btn btn-primary-gold hero-btn-glow">
+            Explore Our Solutions <i data-lucide="arrow-right" style="width:18px;height:18px;"></i>
           </a>
-          <a href="#estimator" class="btn btn-outline-silver">
-            Project Estimator <i data-lucide="calculator" style="width:18px;height:18px;"></i>
+          <a href="#contact" class="btn btn-outline-silver hero-btn-talk">
+            Let's Talk <i data-lucide="message-square" style="width:18px;height:18px;"></i>
           </a>
         </div>
       </div>
@@ -1304,6 +1336,7 @@
   <!-- Scripts -->
   <script src="js/intro-splash.js?v=1"></script>
   <script src="js/hero-canvas.js?v=5"></script>
+  <script src="js/hero-video.js?v=1"></script>
   <script src="js/scroll-rule.js?v=5"></script>
   <script src="js/portfolio.js?v=11"></script>
   <script src="js/estimator.js?v=5"></script>
